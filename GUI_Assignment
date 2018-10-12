@@ -1,0 +1,85 @@
+from tkinter import *
+from tkinter.ttk import *
+from tkinter.ttk import Combobox
+def do0():
+    menu = Menu(root)
+    root.config(menu=menu)
+    subMenu = Menu(menu)
+    menu.add_cascade(label="Nationality", menu=subMenu)
+    e1 = Entry(root)
+    e1.grid(row=0, column=2)
+    subMenu.add_command(label="INDIAN", command=do5)
+    subMenu.add_command(label="FOREIGN", command=do6)
+
+def do():
+    menu = Menu(root)
+    root.config(menu=menu)
+    subMenu = Menu(menu)
+    menu.add_cascade(label="Nationality", menu=subMenu)
+    e1 = Entry(root)
+    e1.grid(row=0, column=2)
+    subMenu.add_command(label="INDIAN", command=do1)
+    subMenu.add_command(label="FOREIGN", command=do2)
+    subMenu.add_command(label="NRI", command=do3)
+    subMenu.add_command(label="SAARC", command=do3)
+def do1():
+    print("Amount = 400")
+def do2():
+    print("Amount = 100")
+def do3():
+    print("Amount = 600")
+
+
+def do4():
+    menu = Menu(root)
+    root.config(menu=menu)
+    subMenu = Menu(menu)
+    menu.add_cascade(label="ALL_courses", menu=subMenu)
+    e1 = Entry(root)
+    e1.grid(row=0, column=2)
+    subMenu.add_command(label="MEDICAL", command=do0)
+    subMenu.add_command(label="DENTAL", command=do0)
+    subMenu.add_command(label="AYURVEDA", command=do0)
+
+
+def do5():
+    menu = Menu(root)
+    root.config(menu=menu)
+    subMenu = Menu(menu)
+    menu.add_cascade(label="ALL_Level", menu=subMenu)
+    e1 = Entry(root)
+    e1.grid(row=0, column=2)
+    subMenu.add_command(label="UG", command=do7)
+    subMenu.add_command(label="UG-DIPLOMA", command=do8)
+    subMenu.add_command(label="PG", command=do9)
+def do7():
+    print("Amount = 200")
+def do8():
+    print("Amount = 300")
+def do9():
+    print("Amount = 500")
+def do6():
+    menu = Menu(root)
+    root.config(menu=menu)
+    subMenu = Menu(menu)
+    menu.add_cascade(label="ALL_Level", menu=subMenu)
+    e1 = Entry(root)
+    e1.grid(row=0, column=2)
+    subMenu.add_command(label="UG", command=do1)
+    subMenu.add_command(label="UG-DIPLOMA", command=do1)
+    subMenu.add_command(label="PG", command=do10)
+def do10():
+    print("Amount = 700")
+root = Tk()
+menu = Menu(root)
+root.config(menu=menu)
+subMenu = Menu(menu)
+menu.add_cascade(label="Fees", menu=subMenu)
+e1= Entry(root)
+e1.grid(row=0, column=2)
+
+subMenu.add_command(label="Application Fees", command=do4)
+subMenu.add_command(label="Exam Fees", command=do)
+
+subMenu.add_separator()
+root.mainloop()
